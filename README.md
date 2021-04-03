@@ -46,7 +46,7 @@ EndSection
 Section "ServerLayout"
 	Identifier "layout"
 	Option "AllowNVIDIAGPUScreens"
-  Option "PrimaryGPU" "yes"
+  	Option "PrimaryGPU" "yes"
 EndSection
 ```
 `Option "PrimaryGPU" "yes"` will make the system use the dGPU instead of the iGPU.
