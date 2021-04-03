@@ -4,7 +4,8 @@ A small script to switch between running with iGPU and dGPU.
 Fedora 33 with Nvidia RTX 2060 with driver 460.67
 # Instructions
 1. Check if your `/etc/X11/xorg.conf.d` has a file called `nvidia.conf`.
-2. In the terminal, run `./SwitchGPU.sh`
+2. Make a new file called `nvidia.conf.bak` with `Option "PrimaryGPU" "yes"` in the Sections
+3. In the terminal, run `./SwitchGPU.sh`
 In case ./SwitchGPU.sh doesn't work, type `chmod +x ./SwitchGPU.sh` and do step 2 again.
 # Details
 Check if your `/etc/X11/xorg.conf.d` has a file called `nvidia.conf`.
@@ -39,7 +40,7 @@ Section "OutputClass"
 	Option "AllowEmptyInitialConfiguration"
 	Option "SLI" "Auto"
 	Option "BaseMosaic" "on"
-  Option "PrimaryGPU" "yes"
+  	Option "PrimaryGPU" "yes"
 EndSection
 
 Section "ServerLayout"
